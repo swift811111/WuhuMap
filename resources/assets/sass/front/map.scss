@@ -1,0 +1,92 @@
+@mixin size($h:auto, $w:auto) {
+    height: $h;
+    width: $w;
+}
+
+.header {
+    z-index: 12;
+}
+
+// map
+#map {
+    height: 94vh;
+    width: 100%;
+}
+
+//map_btn_wrapper
+.content {
+    @include size(100%, 100%);
+    .map_wrapper {
+        @include size(100%, 100%);
+        border-top: 4px solid gray;
+        margin-top: 4px;
+        overflow: hidden;
+        .map {}
+        .map_btn_wrapper {
+            position: absolute;
+            transition: all 0.3s;
+            background-color: white;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 1.5%;
+            border: 2px solid rgb(196, 194, 194);
+            .map_btn {
+                @include size(50px, 40vw);
+                border: 1px solid rgb(161, 161, 161);
+                border-radius: 2px;
+                color: rgb(161, 161, 161);
+                background-color: white;
+                margin: 3% 0 0 5vw;
+                cursor: pointer;
+            }
+        }
+        .map_small_btn {
+            @include size(40px, 40px);
+            display: flex;
+            transition: all 0.25s;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+            border-radius: 50%;
+            position: absolute;
+            left: 10px;
+            z-index: 10;
+            cursor: pointer;
+        }
+        .recent_position_mark {
+            left: 60px;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .content {
+        .map_wrapper {
+            display: flex;
+            .map {}
+            .map_btn_wrapper {
+                position: relative;
+                transition: none;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                width: 20%;
+                padding: 1.5%;
+                border: 0;
+                border-left: 2px solid rgb(196, 194, 194);
+                border-bottom: 2px solid rgb(196, 194, 194);
+                .map_btn {
+                    @include size(50px, 100%);
+                    border: 1px solid gray;
+                    background-color: white;
+                    margin: 2% 2% 2% 2%;
+                }
+            }
+            .map_small_btn {
+                display: none;
+            }
+        }
+    }
+}

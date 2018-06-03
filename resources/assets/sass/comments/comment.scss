@@ -1,0 +1,22 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: '微軟正黑體', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}

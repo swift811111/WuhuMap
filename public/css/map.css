@@ -1,0 +1,116 @@
+.header {
+  z-index: 12;
+}
+
+#map {
+  height: 94vh;
+  width: 100%;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.content .map_wrapper {
+  height: 100%;
+  width: 100%;
+  border-top: 4px solid gray;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.content .map_wrapper .map_btn_wrapper {
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 1.5%;
+  border: 2px solid #c4c2c2;
+}
+
+.content .map_wrapper .map_btn_wrapper .map_btn {
+  height: 50px;
+  width: 40vw;
+  border: 1px solid #a1a1a1;
+  border-radius: 2px;
+  color: #a1a1a1;
+  background-color: white;
+  margin: 3% 0 0 5vw;
+  cursor: pointer;
+}
+
+.content .map_wrapper .map_small_btn {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: aquamarine;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.content .map_wrapper .recent_position_mark {
+  left: 60px;
+}
+
+@media (min-width: 800px) {
+  .content .map_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .content .map_wrapper .map_btn_wrapper {
+    position: relative;
+    -webkit-transition: none;
+    transition: none;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 20%;
+    padding: 1.5%;
+    border: 0;
+    border-left: 2px solid #c4c2c2;
+    border-bottom: 2px solid #c4c2c2;
+  }
+
+  .content .map_wrapper .map_btn_wrapper .map_btn {
+    height: 50px;
+    width: 100%;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 2% 2% 2% 2%;
+  }
+
+  .content .map_wrapper .map_small_btn {
+    display: none;
+  }
+}
+
