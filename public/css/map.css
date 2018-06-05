@@ -52,6 +52,7 @@
 .content .map_wrapper .map_small_btn {
   height: 40px;
   width: 40px;
+  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +64,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: aquamarine;
+  background-color: rgba(26, 86, 214, 0.925);
   border-radius: 50%;
   position: absolute;
   left: 10px;

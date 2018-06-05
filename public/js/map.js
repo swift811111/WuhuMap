@@ -9157,12 +9157,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Hello___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Hello__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_comments_Header__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_comments_Header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_comments_Header__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_content_Mapcontent__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_content_Mapcontent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_content_Mapcontent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_comments_Footer__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_comments_Footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_comments_Footer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_comments_Footer__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_comments_Footer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_comments_Footer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_content_Mapcontent__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_content_Mapcontent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_content_Mapcontent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_content_Activitycontent__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_content_Activitycontent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_content_Activitycontent__);
 __webpack_require__(80);
 // 匯入 Hello.vue 檔，不需加副檔名
+
 
 
 
@@ -9176,8 +9179,9 @@ new Vue({
     components: {
         Hello: __WEBPACK_IMPORTED_MODULE_0__components_Hello___default.a,
         Mapheader: __WEBPACK_IMPORTED_MODULE_1__components_comments_Header___default.a,
-        Mapcontent: __WEBPACK_IMPORTED_MODULE_2__components_content_Mapcontent___default.a,
-        Mapfooter: __WEBPACK_IMPORTED_MODULE_3__components_comments_Footer___default.a
+        Mapcontent: __WEBPACK_IMPORTED_MODULE_3__components_content_Mapcontent___default.a,
+        Mapfooter: __WEBPACK_IMPORTED_MODULE_2__components_comments_Footer___default.a,
+        Activitycontent: __WEBPACK_IMPORTED_MODULE_4__components_content_Activitycontent___default.a
     },
     data: {},
     methods: {
@@ -24436,73 +24440,83 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "header_wrapper" }, [
-    _c("nav", { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" }, [
-      _c(
-        "a",
-        { staticClass: "navbar-brand", attrs: { href: "/WuhuMap/public/" } },
-        [_vm._v("澎湖旅遊地圖")]
-      ),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "collapse navbar-collapse",
-          attrs: { id: "navbarNavAltMarkup" }
-        },
-        [
-          _c("div", { staticClass: "navbar-nav" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-item nav-link",
-                attrs: { href: "/WuhuMap/public/" }
-              },
-              [_vm._v("旅遊地圖")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              { staticClass: "nav-item nav-link", on: { click: _vm.test } },
-              [_vm._v("活動資訊")]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "nav-item nav-link",
-                attrs: { href: "/WuhuMap/public/activity" }
-              },
-              [_vm._v("住宿資訊")]
-            )
-          ])
-        ]
-      )
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "navbar-toggler",
-        attrs: {
-          type: "button",
-          "data-toggle": "collapse",
-          "data-target": "#navbarNavAltMarkup",
-          "aria-controls": "navbarNavAltMarkup",
-          "aria-expanded": "false",
-          "aria-label": "Toggle navigation"
-        }
-      },
-      [_c("span", { staticClass: "navbar-toggler-icon" })]
-    )
+    return _c("div", { staticClass: "header_wrapper" }, [
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" },
+        [
+          _c(
+            "a",
+            {
+              staticClass: "navbar-brand",
+              attrs: { href: "/WuhuMap/public/" }
+            },
+            [_vm._v("澎湖旅遊地圖")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "navbar-toggler",
+              attrs: {
+                type: "button",
+                "data-toggle": "collapse",
+                "data-target": "#navbarNavAltMarkup",
+                "aria-controls": "navbarNavAltMarkup",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation"
+              }
+            },
+            [_c("span", { staticClass: "navbar-toggler-icon" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "collapse navbar-collapse",
+              attrs: { id: "navbarNavAltMarkup" }
+            },
+            [
+              _c("div", { staticClass: "navbar-nav" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-item nav-link",
+                    attrs: { href: "/WuhuMap/public/" }
+                  },
+                  [_vm._v("旅遊地圖")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-item nav-link",
+                    attrs: { href: "/WuhuMap/public/activity" }
+                  },
+                  [_vm._v("活動資訊")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-item nav-link",
+                    attrs: { href: "/WuhuMap/public/stays" }
+                  },
+                  [_vm._v("住宿資訊")]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ])
   }
 ]
 render._withStripped = true
@@ -24629,6 +24643,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['name'],
@@ -24674,7 +24690,7 @@ var render = function() {
         _c("input", {
           staticClass: "map_btn",
           class: [_vm.comment_styles.btn_active == "water" ? _vm.active : null],
-          attrs: { id: "show-listings", type: "button", value: "水補給站" },
+          attrs: { id: "show_waters", type: "button", value: "水補給站" },
           on: {
             click: function($event) {
               ;(_vm.comment_styles.btn_active = "water"), (_vm.show = false)
@@ -24685,7 +24701,7 @@ var render = function() {
         _c("input", {
           staticClass: "map_btn",
           class: [_vm.comment_styles.btn_active == "stay" ? _vm.active : null],
-          attrs: { id: "show-other", type: "button", value: "住宿推薦" },
+          attrs: { id: "show_stays", type: "button", value: "住宿推薦" },
           on: {
             click: function($event) {
               ;(_vm.comment_styles.btn_active = "stay"), (_vm.show = false)
@@ -24698,7 +24714,7 @@ var render = function() {
           class: [
             _vm.comment_styles.btn_active == "attractions" ? _vm.active : null
           ],
-          attrs: { id: "hide-listings", type: "button", value: "景點地圖" },
+          attrs: { id: "show_attractions", type: "button", value: "景點地圖" },
           on: {
             click: function($event) {
               ;(_vm.comment_styles.btn_active = "attractions"),
@@ -24712,7 +24728,7 @@ var render = function() {
           class: [
             _vm.comment_styles.btn_active == "restaurant" ? _vm.active : null
           ],
-          attrs: { id: "show-restaurant", type: "button", value: "餐廳位置" },
+          attrs: { id: "show_restaurant", type: "button", value: "餐廳位置" },
           on: {
             click: function($event) {
               ;(_vm.comment_styles.btn_active = "restaurant"),
@@ -24734,37 +24750,50 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "map_small_btn",
-        class: [
-          _vm.show == true
-            ? _vm.comment_styles.btn_show
-            : _vm.comment_styles.btn_hidden
-        ],
-        on: {
-          click: function($event) {
-            _vm.show = !_vm.show
+    _vm.show == false
+      ? _c("img", {
+          staticClass: "map_small_btn",
+          class: [
+            _vm.show == true
+              ? _vm.comment_styles.btn_show
+              : _vm.comment_styles.btn_hidden
+          ],
+          attrs: { src: "/WuhuMap/resources/assets/img/search.png" },
+          on: {
+            click: function($event) {
+              _vm.show = !_vm.show
+            }
           }
-        }
-      },
-      [_vm._v("M")]
-    ),
+        })
+      : _vm.show == true
+        ? _c("img", {
+            staticClass: "map_small_btn",
+            class: [
+              _vm.show == true
+                ? _vm.comment_styles.btn_show
+                : _vm.comment_styles.btn_hidden
+            ],
+            attrs: { src: "/WuhuMap/resources/assets/img/cancel.png" },
+            on: {
+              click: function($event) {
+                _vm.show = !_vm.show
+              }
+            }
+          })
+        : _vm._e(),
     _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "map_small_btn recent_position_mark",
-        class: [
-          _vm.show == true
-            ? _vm.comment_styles.btn_show
-            : _vm.comment_styles.btn_hidden
-        ],
-        attrs: { id: "show_position" }
-      },
-      [_vm._v("O")]
-    )
+    _c("img", {
+      staticClass: "map_small_btn recent_position_mark",
+      class: [
+        _vm.show == true
+          ? _vm.comment_styles.btn_show
+          : _vm.comment_styles.btn_hidden
+      ],
+      attrs: {
+        id: "show_position",
+        src: "/WuhuMap/resources/assets/img/maps-and-flags.png"
+      }
+    })
   ])
 }
 var staticRenderFns = []
@@ -24932,6 +24961,224 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(246)
+}
+var normalizeComponent = __webpack_require__(25)
+/* script */
+var __vue_script__ = __webpack_require__(248)
+/* template */
+var __vue_template__ = __webpack_require__(249)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\content\\Activitycontent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-09367a80", Component.options)
+  } else {
+    hotAPI.reload("data-v-09367a80", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(247);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(24)("2c1c7265", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-09367a80\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Activitycontent.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-09367a80\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Activitycontent.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(10)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.activity_wrapper .breadcrumb_wrapper .breadcrumb {\n  margin-bottom: 0 !important;\n}\n.activity_wrapper .activity_title_wrapper {\n  height: 45px;\n  width: 100%;\n  margin: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding-left: 1rem;\n  font-size: 1rem;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 248 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['name'],
+    data: function data() {
+        return {};
+    },
+
+    methods: {}
+});
+
+/***/ }),
+/* 249 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "activity_wrapper" }, [
+      _c("div", { staticClass: "breadcrumb_wrapper" }, [
+        _c("nav", { attrs: { "aria-label": "breadcrumb" } }, [
+          _c("ol", { staticClass: "breadcrumb" }, [
+            _c("li", { staticClass: "breadcrumb-item" }, [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("首頁")])
+            ]),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "breadcrumb-item active",
+                attrs: { "aria-current": "page" }
+              },
+              [_vm._v("活動")]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "activity_title_wrapper" }, [
+        _vm._v("活動資訊")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "activity_search_wrapper" }, [
+        _c("nav", { staticClass: "navbar navbar-light bg-light" }, [
+          _c("form", { staticClass: "form-inline" }, [
+            _c("input", {
+              staticClass: "form-control mr-sm-2",
+              attrs: {
+                type: "search",
+                placeholder: "Search",
+                "aria-label": "搜尋"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-outline-success my-2 my-sm-0",
+                attrs: { type: "submit" }
+              },
+              [_vm._v("搜尋")]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "activity_sort_wrapper" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "activity_content_wrapper" })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-09367a80", module.exports)
+  }
+}
 
 /***/ })
 ],[78]);

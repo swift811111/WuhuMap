@@ -8,8 +8,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="/WuhuMap/public/">旅遊地圖</a>
-                    <a class="nav-item nav-link" @click="test">活動資訊</a>
-                    <a class="nav-item nav-link" href="/WuhuMap/public/activity">住宿資訊</a>
+                    <a class="nav-item nav-link" href="/WuhuMap/public/activity">活動資訊</a>
+                    <a class="nav-item nav-link" href="/WuhuMap/public/stays">住宿資訊</a>
                 </div>
             </div>
         </nav>

@@ -14,12 +14,19 @@
 Route::get('/', function () {
     return view('map');
 });
-//activity
+//activity relative-----------------------------
+//前往活動資訊
 Route::get('/activity', function () {
     return view('activity');
 });
 
-// Route::post('/activity',[  //更新群組
-//         'as' => 'activity.entry',
-//         // 'uses' => 'UsersController@group_update'
-//     ]);
+//stays relative-------------------------------
+Route::get('/stays', function () {
+    return view('stays');
+});
+
+// maps relative-------------------------------
+Route::post('/maps',[  //根據類別顯示地圖
+        'as' => 'maps.post',
+        'uses' => 'MapsController@get_by_mapstype'
+    ]);

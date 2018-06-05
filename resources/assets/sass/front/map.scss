@@ -44,11 +44,12 @@
         }
         .map_small_btn {
             @include size(40px, 40px);
+            padding: 8px;
             display: flex;
             transition: all 0.25s;
             justify-content: center;
             align-items: center;
-            background-color: aquamarine;
+            background-color: rgba(26, 86, 214, 0.925);
             border-radius: 50%;
             position: absolute;
             left: 10px;

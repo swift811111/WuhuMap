@@ -2,12 +2,11 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Maps extends Model
 {
-    use Notifiable;
+    protected $table = 'maps' ;
 
     /**
      * The attributes that are mass assignable.
@@ -15,7 +14,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','users_uuid'
+        'id','coordinate_uuid','coordinate_name','coordinate','coordinate_address','coordinate_phone','created_at','updated_at'
     ];
 
     /**
@@ -24,6 +23,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'coordinate_uuid', 
     ];
 }

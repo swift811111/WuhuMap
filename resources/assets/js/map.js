@@ -2,8 +2,9 @@ require('./bootstrap');
 // 匯入 Hello.vue 檔，不需加副檔名
 import Hello from './components/Hello';
 import Mapheader from './components/comments/Header';
-import Mapcontent from './components/content/Mapcontent';
 import Mapfooter from './components/comments/Footer';
+import Mapcontent from './components/content/Mapcontent';
+import Activitycontent from './components/content/Activitycontent';
 
 new Vue({
     // 找到 hello.blade.php 中指定的掛載點元素
@@ -14,7 +15,8 @@ new Vue({
         Hello,
         Mapheader,
         Mapcontent,
-        Mapfooter
+        Mapfooter,
+        Activitycontent
     },
     data: {
 

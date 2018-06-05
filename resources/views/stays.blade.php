@@ -1,13 +1,13 @@
 @extends('layouts.default')
 
-@section('title', '活動資訊')
+@section('title', '住宿資訊')
 
 @section('content')
     <div class="header">
         <Mapheader></Mapheader>
     </div>
     <div class="content">
-       <Activitycontent></Activitycontent>
+       
     </div>
     <div class="footer">
         <!-- <Mapfooter></Mapfooter> -->
@@ -21,5 +21,5 @@
 
 @section('style')
 <!-- 自己的 css 檔 -->
-<!-- <link rel="stylesheet" type="text/css" href="/WuhuMap/public/css/activitys.css"> -->
+<link rel="stylesheet" type="text/css" href="/WuhuMap/public/css/map.css">
 @endsection

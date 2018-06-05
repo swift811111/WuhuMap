@@ -57,18 +57,21 @@
                                 'Error: Your browser doesn\'t support geolocation.');
         }
         
-        function location(loc) {
+        function location(loc,img) {
             var location = loc ;
+            var icon = img ;
             location.forEach( (item,index) => {
-                var position = item.location ;
-                var title = item.title ;
-                var phone = item.phone ;
+                var position = JSON.parse(item.coordinate) ;
+                var name = item.coordinate_name ;
+                var phone = item.coordinate_phone ;
+                var address = item.coordinate_address ;
                 var marker = new google.maps.Marker({  //在地圖上標記點
                     position: position,
                     // map: map,
-                    title: title,
+                    name: name,
                     phone: phone,
-                    icon: '/WuhuMap/resources/assets/img/drop.png',
+                    icon: icon,
+                    address: address ,
                     animation: google.maps.Animation.DROP,
                     id: index ,
                 });
@@ -92,8 +95,9 @@
             if(infowindow.marker != marker){
                 infowindow.marker = marker ;
                 infowindow.setContent(
-                    '<div>'+ marker.title+'</div>'
+                    '<div>'+ marker.name+'</div>'
                     +'<div>'+ marker.phone+'</div>'
+                    +'<div>'+'<a href="http://maps.google.com/maps?daddr='+marker.name+marker.address+'&hl=zh-tw" target="_blank">'+'點此使用google地圖'+'</a>'+'</div>'
                 );
                 infowindow.open(map,marker);
                 infowindow.addListener( 'closeclick',function(){
@@ -111,18 +115,65 @@
         }
         
         // show marker -------------------------
-        function showListings(){
-            hideListings();
-            location(location_1);
+        function show_waters(){
+            hideListings();      
+            axios.post('/WuhuMap/public/maps',{
+                type:'water',
+            })
+            .then(function(response) {
+                console.log(response);
+                location(response.data,'/WuhuMap/resources/assets/img/drop.png');
+            })
+            .catch(function(response) {
+                console.log("error");
+            });
+                
         }
-        function show_other(){
+        function show_stays(){
             hideListings();
-            location(location_2);
+            axios.post('/WuhuMap/public/maps',{
+                type:'stay',
+            })
+            .then(function(response) {
+                console.log(response);
+                location(response.data,'/WuhuMap/resources/assets/img/placeholder.png');
+            })
+            .catch(function(response) {
+                console.log("error");
+            });
+            //location(location_2);
+        }
+        function show_attractions(){
+            hideListings();
+            axios.post('/WuhuMap/public/maps',{
+                type:'attractions',
+            })
+            .then(function(response) {
+                console.log(response);
+                location(response.data,'/WuhuMap/resources/assets/img/route.png');
+            })
+            .catch(function(response) {
+                console.log("error");
+            });
+        }
+        function show_restaurant(){
+            hideListings();
+            axios.post('/WuhuMap/public/maps',{
+                type:'restaurant',
+            })
+            .then(function(response) {
+                console.log(response);
+                location(response.data,'/WuhuMap/resources/assets/img/cutlery.png');
+            })
+            .catch(function(response) {
+                console.log("error");
+            });
         }
 
-        document.getElementById('show-listings').addEventListener('click', showListings);
-        document.getElementById('hide-listings').addEventListener('click', hideListings);
-        document.getElementById('show-other').addEventListener('click', show_other);
+        document.getElementById('show_waters').addEventListener('click', show_waters);
+        document.getElementById('show_stays').addEventListener('click', show_stays);
+        document.getElementById('show_attractions').addEventListener('click', show_attractions);
+        document.getElementById('show_restaurant').addEventListener('click', show_restaurant);
         document.getElementById('show_position').addEventListener('click', function(){
             let infoWindow = new google.maps.InfoWindow({map: map});
             // Try HTML5 geolocation.
@@ -145,7 +196,7 @@
             }
         });
 
-        showListings();
+        show_waters();
       }
     </script>
     <script async defer
